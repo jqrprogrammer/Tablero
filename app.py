@@ -21,7 +21,7 @@ app.config.suppress_callback_exceptions = True
 
 # Load data from csv
 def load_data():
-    df = pd.read_csv(r'D:\Meastría Uniandes\Despliegue de Sokuciones Analíticas\Semana 1\Repositorio_jqr\datos_energia.csv')
+    df = pd.read_csv('datos_energia.csv')
     df['time'] = pd.to_datetime(df['time'])
     df = df.set_index('time')
     return df
